@@ -7,38 +7,37 @@
     <link rel="stylesheet" href="./dist/output.css">
     <title>Document</title>
 </head>
-<body class="grid place-content-center bg-bg">
-    <main class="relative w-screen h-screen flex justify-center ">
-
-        <img class="mt-10 ml-20 absolute top-0 left-0" src="./img/Vector.png" alt="logo">
-        <section class="w-3/5 h-auto  mt-28 ml-44 relative pr-20 ">
-            <textarea class="resize-none w-664 h-auto  bg-bg outline-none text-blue/dark placeholder:text-blue/dark text-3xl " name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+<body class="grid place-items-center bg-bg">
+    <main class="relative w-screen px-4 md:px-10 xl:px-0 xl:h-screen xl:mx-0 xl:flex xl:justify-center  ">
+        <img class="mt-6 ml-4 md:mt-20 md:ml-0 xl:mt-10 xl:ml-20 md:absolute xl:absolute xl:top-0 xl:left-0" src="./img/Vector.png" alt="logo">
+        <section class="mt-36 w-full md:mt-60 md:h-tablet xl:mt-28 xl:w-3/5 xl:h-auto xl:ml-44 relative  ">
+            <textarea class=" resize-none w-full xl:w-664 h-auto bg-bg outline-none text-blue/dark placeholder:text-blue/dark text-3xl " name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
             
-            <div class="absolute bottom-3">
+            <div class="xl:absolute xl:bottom-3 mb-16 xl:mb-0 ">
                 <div class="flex gap-2 align-middle mb-4">
                     <img src="./img/Alert.svg" alt="alertIcon" width="15">
                     <p class="text-xs text-Gray400">Solo letras minúsculas y sin acentos</p>
                 </div>
-                <div class="flex gap-4 mb-5 ">
+                <div class="flex flex-col md:flex-row xl:flex-row gap-4 mb-5  justify-center items-center ">
                     <button id="btnE" class="botones">Encriptar</button>
-                    <button id="btnD" class="botones bg-Lightgray text-blue/dark border border-blue/dark">Desencriptar</button>
+                    <button id="btnD" class="botones bg-Lightgray text-blue/dark ">Desencriptar</button>
                 </div>
-            </div>    
+            </div>  
         </section>
 
-        <section class=" w-96 h-auto my-5 bg-white px-6 rounded-3xl  mr-6 relative">
-            <div class="mt-4 p-5 text-center " id="contentEnc">
-                <img class="mt-10 mx-auto" src="./img/Muñeco.png" alt="muñeco">
+        <section class="w-full mb-10  xl:w-96 h-auto xl:my-5 bg-white p-6 rounded-3xl xl:mr-6 relative  ">
+            <div class="hidden mt-4 p-5 text-center " id="contentEnc">
+                <img class="mt-10 mx-auto md:hidden xl:inline" src="./img/Muñeco.png" alt="muñeco">
                 <h1 class="text-2xl mb-6 text-Gray500 px-6">Ningún mensaje fue encontrado</h1>
                 <p class=" text-Gray400 ">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
 
-            <div class="my-7 hidden" id="msjResult">
-                <p class="text-2xl text-Gray400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <div class="my-7 md:p-4 xl:p-0" id="msjResult">
+                <p class="text-2xl text-Gray400 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                      Orci montes, sit et diam risus scelerisque vitae est. 
                      Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget 
                      fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
-                <button id="btnC" class="botones bg-white text-blue/dark absolute bottom-3 mx-auto left-0 right-0  ">Copiar</button>
+                <button id="btnC" class="botones bg-white text-blue/dark w-full xl:w-332 md:mt-8 xl:absolute xl:bottom-3 xl:mx-auto xl:left-0 xl:right-0  ">Copiar</button>
             </div>
         </section>
     </main>
