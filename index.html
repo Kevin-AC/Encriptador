@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/output.css">
-    <title>Document</title>
+    <title>Encriptardor</title>
 </head>
 <body class="grid place-items-center bg-bg">
     <main class="relative w-screen px-4 md:px-10 xl:px-0 xl:h-screen xl:mx-0 xl:flex xl:justify-center  ">
-        <img class="mt-6 ml-4 md:mt-20 md:ml-0 xl:mt-10 xl:ml-20 md:absolute xl:absolute xl:top-0 xl:left-0" src="./img/Vector.png" alt="logo">
-        <section class="mt-36 w-full md:mt-60 md:h-tablet xl:mt-28 xl:w-3/5 xl:h-auto xl:ml-44 relative  ">
-            <textarea class=" resize-none w-full xl:w-664 h-auto bg-bg outline-none text-blue/dark placeholder:text-blue/dark text-3xl " name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+        <img class="mt-6  md:mt-20 md:ml-0 xl:mt-10 xl:ml-20 md:absolute xl:absolute xl:top-0 xl:left-0" src="./img/Vector.png" alt="logo">
+        <section class="mt-16 w-full md:mt-60 md:h-tablet xl:mt-28 xl:w-3/5 xl:h-auto xl:ml-44 relative  ">
+            <textarea id="inputText" class=" resize-none w-full xl:w-664 h-auto bg-bg outline-none text-blue/dark placeholder:text-blue/dark text-3xl " name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
             
             <div class="xl:absolute xl:bottom-3 mb-16 xl:mb-0 ">
                 <div class="flex gap-2 align-middle mb-4">
                     <img src="./img/Alert.svg" alt="alertIcon" width="15">
-                    <p class="text-xs text-Gray400">Solo letras minúsculas y sin acentos</p>
+                    <p id="error" class="text-xs text-Gray400 ">Solo letras minúsculas y sin acentos</p>
                 </div>
                 <div class="flex flex-col md:flex-row xl:flex-row gap-4 mb-5  justify-center items-center ">
                     <button id="btnE" class="botones">Encriptar</button>
@@ -26,14 +26,15 @@
         </section>
 
         <section class="w-full mb-10  xl:w-96 h-auto xl:my-5 bg-white p-6 rounded-3xl xl:mr-6 relative  ">
-            <div class=" mt-4 p-5 text-center " id="contentEnc">
+            <div class="   mt-4  text-center " id="contentEnc">
                 <img class="mt-10 mx-auto hidden xl:inline" src="./img/Muñeco.png" alt="muñeco">
-                <h1 class="text-2xl mb-6 text-Gray500 px-6">Ningún mensaje fue encontrado</h1>
-                <p class=" text-Gray400 ">Ingresa el texto que desees encriptar o desencriptar</p>
+                <h1 class="text-2xl mt-2 mb-6 text-Gray500 px-6">Ningún mensaje fue encontrado</h1>
+                <p class="w-full h-auto  text-gray-400 text-center ">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
 
             <div class="hidden my-7 md:p-4 xl:p-0" id="msjResult">
-                <p class="text-2xl text-Gray400 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <p id="result" class="text-2xl w-full text-Gray400 mb-6 mx-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                      Orci montes, sit et diam risus scelerisque vitae est. 
                      Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget 
                      fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
